@@ -14,8 +14,8 @@ const InnerHome = styled.div`
   padding: 0;
   background-image: linear-gradient(
     to bottom left,
-    rgba(250,196,0, 0.6),
-    rgba(243,51,252,0.9)
+    rgba(250,196,0, 0.8),
+    rgba(243,51,252)
   );
 `;
 
@@ -40,7 +40,7 @@ const IconStyle = styled.div`
 `;
 
 const InnerText = styled.div`
-  padding: 18vh 14.6vw;
+  padding: 18vh 16vw;
   height: 100%;
   flex-direction: column;
   @media (max-width: 900px) {

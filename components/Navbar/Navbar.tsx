@@ -9,7 +9,7 @@ const NavBar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 14.6vw;
+  padding: 12px 16.5vw;
   margin: 0;
   z-index: 100;
   @media screen and (max-width: 900px) {

@@ -4,7 +4,7 @@
     background-image: url('../public/background.webp');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 0;
 }
 
 .icon{
