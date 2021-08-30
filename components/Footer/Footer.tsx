@@ -29,6 +29,9 @@ const Flex = styled.div`
     flex-wrap: wrap;
     padding: 40px 10px 0 10px
   }
+  @media (max-width: 576px){
+    flex-direction: column;
+  }
 `;
 
 const First = styled.div`

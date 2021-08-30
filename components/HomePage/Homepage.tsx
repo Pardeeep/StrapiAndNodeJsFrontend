@@ -15,7 +15,7 @@ const InnerHome = styled.div`
   background-image: linear-gradient(
     to bottom left,
     rgba(250,196,0, 0.5),
-    rgba(238,44,250,0.9)
+    rgba(238,44,250,0.5)
   );
 `;
 
