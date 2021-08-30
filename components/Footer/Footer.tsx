@@ -19,7 +19,7 @@ const Flex = styled.div`
   display: flex;
   background: #222831;
   justify-content: space-evenly;
-  padding: 40px 100px 0px 100px;
+  padding: 40px 130px 0px 130px;
   padding-bottom: 0;
   @media (max-width: 1000px){
     padding: 40px 20px 0 20px;
@@ -49,7 +49,8 @@ const List = styled.p`
 `;
 const Para = styled.p`
   width: 15em;
-  font-size: 0.75rem;
+  font-size: 0.6rem;
+  padding-bottom: 1rem;
   color: #e5e5e5;
 `;
 
