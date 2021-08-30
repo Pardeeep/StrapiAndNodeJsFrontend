@@ -5,10 +5,7 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Homepage from "../components/HomePage/Homepage";
-import life from "../public/life.jpg";
-import life1 from "../public/life2.jpg";
-import life2 from "../public/life3.jpg";
-import life3 from "../public/life4.jpg";
+
 
 interface Post {
   id: number,
