@@ -102,6 +102,13 @@ const Div = styled.div`
       color: black;
     }
   }
+  .Active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    color: black;
 `;
 
 function Navbar() {
