@@ -10,22 +10,24 @@ import {
 import styles from "../../styles/Home.module.css";
 import styled from "styled-components";
 import Image from "next/dist/client/image";
-import life2 from "../../public/life2.jpg";
+import life2 from "../../public/car.webp";
+import life from "../../public/2.webp";
 
 const Icon = styled.div``;
 
 const Flex = styled.div`
   display: flex;
   background: #222831;
-  justify-content: space-around;
-  padding: 0 50px;
-  padding-top: 40px;
-
-  height: 50vh;
+  justify-content: space-evenly;
+  padding: 40px 100px 0px 100px;
+  padding-bottom: 0;
+  @media (max-width: 1000px){
+    padding: 40px 20px 0 20px;
+  }
   @media (max-width: 768px) {
     height: fit-content;
-    flex-direction: column;
-
+    flex-wrap: wrap;
+    padding: 40px 10px 0 10px
   }
 `;
 
@@ -35,14 +37,14 @@ const First = styled.div`
   }
   .li2 {
     margin-top: 2rem;
-    font-size: 0.8rem;
+    font-size: 0.6rem;
     color: #d5d5d5;
   }
 `;
 
 const List = styled.p`
   margin: 0;
-  font-size: 0.8rem;
+  font-size: 0.6rem;
   margin-bottom: 0.6rem;
 `;
 const Para = styled.p`
@@ -53,35 +55,36 @@ const Para = styled.p`
 
 const Icons = styled.p`
   width: 15em;
-  font-size: 1rem;
+  font-size: 0.6rem;
   margin-bottom: 1rem;
 `;
 
 const P = styled.p`
   text-align: center;
-  fontsize: 0.75rem;
-  color: #e5e5e5;
+  font-size: 0.6rem;
   margin: 0;
+  color: #e5e5e5;
+  background:  #222831;
   padding: 40px;
-  background: #222831;
-`;
+  padding-bottom: 50px;
+  `;
 
 const ImageStyle = styled.div`
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
   margin-right: 1.5rem;
-  top: 20px;
+  top: 15px;
 `;
 
 const Describe = styled.p`
-  width: 10em;
-  font-size: 0.8rem;
+  width: 11em;
+  font-size: 0.6rem;
 `;
 
 const Deta = styled.p`
   color: #707070;
-  font-size: .6rem;
+  font-size: 0.5rem;
 `;
 
 const Flex3 = styled.div`
@@ -91,7 +94,9 @@ const Flex3 = styled.div`
   &:hover .description {
     color: rgb(250, 210, 0);
   }
-
+  .img{
+    border-radius: 5px;
+  }
 `;
 
 const Flexi = styled.div`
@@ -120,9 +125,10 @@ function Footer() {
         </First>
 
         <Flexi>
+          <p style={{ margin: "0", paddingTop: "20px", fontSize: ".75rem" }}>latest News</p>
           <Flex3>
             <ImageStyle>
-              <Image src={life2} alt="lgkldg" layout="fill" />
+              <Image src={life2} className="img" alt="lgkldg" layout="fill" />
             </ImageStyle>
             <Flex1>
               <Describe className="description">
@@ -133,7 +139,7 @@ function Footer() {
           </Flex3>
           <Flex3>
             <ImageStyle>
-              <Image src={life2} alt="lgkldg" layout="fill" />
+              <Image src={life} className="img" alt="lgkldg" layout="fill" />
             </ImageStyle>
             <Flex1>
               <Describe className="description">
@@ -145,14 +151,14 @@ function Footer() {
         </Flexi>
 
         <First>
-          <p>Information</p>
+          <p style={{ margin: "0", paddingTop: "20px", fontSize: ".75rem" }}>Information</p>
           <List className="li1">&gt; Home</List>
           <List>&gt; Articles</List>
           <List>&gt; Contact</List>
           <List>&gt; About</List>
         </First>
         <First>
-          <p>Have a Question</p>
+          <p style={{ margin: "0", paddingTop: "18px", fontSize: ".75rem" }}>Have a Question</p>
           <Icons className="li2">
             <FaMapMarkerAlt /> 203 Fake St. Mountain View, San Francisco,
             California, USA
@@ -165,11 +171,10 @@ function Footer() {
           </Icons>
         </First>
       </Flex>
-      <P>
-        {" "}
-        Copyright ©2021 All rights are reserved | This template is made with
-        love by Colorib
-      </P>
+        <P>
+          Copyright ©2021 All rights are reserved | This template is made with
+          love by Colorib
+        </P>
     </>
   );
 }

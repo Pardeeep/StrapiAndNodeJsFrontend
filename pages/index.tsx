@@ -1,4 +1,5 @@
 import type { NextPage } from "next";
+import Link from 'next/link'
 import styled from "styled-components";
 import { GetStaticProps } from "next";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
@@ -32,6 +33,33 @@ const Center = styled.div`
   overflowx: none;
 `;
 
+const Pages = styled.div`
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .active {
+      background: rgb(250,210,10);
+      padding-left: 1px;
+      color: white;
+    }
+`
+
+const Icons = styled.div`
+  width: 30px;
+  height: 30px;
+  border: 0.5px solid #e5e5e5;
+  color: #808080;
+  font-size: .7rem;
+  border-radius: 50%;
+  margin: 10px;
+  margin-bottom: 5rem;
+  display: grid;
+  cursor: pointer;
+  place-items:center;
+
+`
+
 const Home = (props :any) => {
 
   return (
@@ -40,6 +68,15 @@ const Home = (props :any) => {
       <Center>
         {props.data.posts.map((post:Post)=> <Card key={post.id} Description={props.Description} image={post.Cover.url} alt={post.Title} />)}
       </Center>
+      <Pages>
+        <Link href="/" passHref={true}><Icons>&lt;</Icons></Link>
+        <Link href="/" passHref={true}><Icons className="active">1</Icons></Link>
+        <Link href="/" passHref={true}><Icons>2</Icons></Link>
+        <Link href="/" passHref={true}><Icons>3</Icons></Link>
+        <Link href="/" passHref={true}><Icons>4</Icons></Link>
+        <Link href="/" passHref={true}><Icons>5</Icons></Link>
+        <Link href="/" passHref={true}><Icons>&gt;</Icons></Link>
+      </Pages>
       <Footer />
     </Containter>
   );

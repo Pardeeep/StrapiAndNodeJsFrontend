@@ -1,7 +1,10 @@
 
 
 .home{
-    background-image: url('../public/girl.jpg');
+    background-image: url('../public/background.webp');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .icon{
@@ -24,9 +27,4 @@
   }
 .icons:hover {
   color: rgb(255, 200, 5);
-}
-@media (max-width: 768px) {
-
-
-
 }

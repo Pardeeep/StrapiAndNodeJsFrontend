@@ -14,8 +14,8 @@ const InnerHome = styled.div`
   padding: 0;
   background-image: linear-gradient(
     to bottom left,
-    rgba(250, 193, 99, 0.9),
-    rgba(239, 46, 243, 0.9)
+    rgba(250,196,0, 0.5),
+    rgba(238,44,250)
   );
 `;
 
@@ -27,12 +27,12 @@ const k = keyframes`
 `;
 
 const IconStyle = styled.div`
-  font-size: 2rem;
+  font-size: 1rem;
   cursor: pointer;
   height: 30px;
   .icons {
     height: 100px;
-    font-size: 1rem;
+    font-size: .75rem;
     animation-name: ${k};
     animation-duration: 2s;
     animation-iteration-count: infinite;
@@ -40,28 +40,36 @@ const IconStyle = styled.div`
 `;
 
 const InnerText = styled.div`
-  padding: 6vw 15vw;
-
+  padding: 18vh 14.6vw;
   height: 100%;
   flex-direction: column;
+  @media (max-width: 900px) {
+    padding: 22vh 15px;
+  }
   @media (max-width: 768px) {
-    padding: 35vh 1vw;
+    padding: 30vh 15px;
   }
 `;
 
 const Description = styled.p`
-  max-width: 23em;
+  max-width: 36em;
+  font-size: 13px;
 `;
-const Heading = styled.h1`
+const Heading = styled.p`
   font-size: 10vw;
-  font-weight: bold;
+  font-weight: 900;
   margin: 0;
   padding: 0;
-  line-height: 1.2;
+  line-height: 1;
+  letter-spacing: 2px;
+  @media (max-width: 768px){
+    font-size: 14vw;
+  }
 `;
 const Hello = styled.p`
   margin: 0;
-  padding: 0;
+  padding-bottom: 10px;
+  font-size: .75rem;
 `;
 
 function Homepage() {
