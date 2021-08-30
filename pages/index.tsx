@@ -5,8 +5,6 @@ import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
 import Card from "../components/Card/Card";
 import Footer from "../components/Footer/Footer";
 import Homepage from "../components/HomePage/Homepage";
-
-
 interface Post {
   id: number,
   Cover: { url: StaticImageData , __typename: string },
@@ -35,7 +33,6 @@ const Center = styled.div`
 `;
 
 const Home = (props :any) => {
-  let i: StaticImageData[] = [life, life1, life2, life3];
 
   return (
     <Containter>
