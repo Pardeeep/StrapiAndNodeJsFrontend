@@ -109,6 +109,7 @@ const Div = styled.div`
     right: 0;
     background: white;
     color: black;
+    border-bottom: 1px solid black;
 `;
 
 function Navbar() {
