@@ -53,7 +53,7 @@ const Flex = styled.div`
 `;
 const Flex1 = styled.div``
 
-function Card(props: { image: StaticImageData; alt: string }) {
+function Card(props: { image: StaticImageData, alt: string , Description: string}) {
   console.log(props.image)
   const myLoader=()=>{
     return `https://intense-journey-63176.herokuapp.com${props.image}`;
@@ -64,7 +64,7 @@ function Card(props: { image: StaticImageData; alt: string }) {
         <Image loader={myLoader} src={`https://intense-journey-63176.herokuapp.com${props.image}`} alt={props.alt} layout="fill" />
       </ImageStyle>
       <Flex1>
-        <Para>ILLUSTRATION</Para>
+        <Para>{props.alt}</Para>
         <Describe className="description">
           Build a website in minutes with Adobe Templates
         </Describe>

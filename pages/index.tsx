@@ -44,7 +44,7 @@ const Home = (props :any) => {
     <Containter>
       <Homepage />
       <Center>
-        {props.data.posts.map((post:Post)=> <Card key={post.id} image={post.Cover.url} alt={post.Title} />)}
+        {props.data.posts.map((post:Post)=> <Card key={post.id} Description={props.Description} image={post.Cover.url} alt={post.Title} />)}
       </Center>
       <Footer />
     </Containter>
