@@ -12,11 +12,9 @@ const NavBar = styled.nav`
   padding: 12px 14.6vw;
   margin: 0;
   z-index: 100;
-
   @media screen and (max-width: 900px) {
     padding: 18px 10px;
   }
-
   @media screen and (max-width: 768px) {
     flex-direction: column;
     background: #000;
@@ -47,7 +45,8 @@ const Links = styled.ul`
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    padding: 0;
+    margin-top: 40px;
+    width: 100%;
     display: none;
   }
 `;
@@ -94,7 +93,7 @@ const Div = styled.div`
     .Active {
       flex-direction: column;
       align-items: flex-start;
-      padding: 5px 0px;
+      padding: 8px 0px;
       position: fixed;
       top: 0;
       left: 0;
@@ -121,7 +120,7 @@ function Navbar() {
   });
   return (
     <Div>
-      <NavBar data-aos="fade-down" className={navbar ? "Active show" : "none"}>
+      <NavBar data-aos="fade-down" className={navbar ? "Active" : "none"}>
         <Logo>
           Read<Span>it</Span>.
         </Logo>

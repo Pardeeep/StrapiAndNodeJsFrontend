@@ -42,6 +42,10 @@ const First = styled.div`
     margin-top: 2rem;
     font-size: 0.6rem;
     color: #d5d5d5;
+    @media( max-width: 576px){
+      width: 100%;
+      padding: 0 5px;
+    }
   }
 `;
 
@@ -55,6 +59,10 @@ const Para = styled.p`
   font-size: 0.6rem;
   padding-bottom: 1rem;
   color: #e5e5e5;
+  @media( max-width: 576px){
+    width: 100%;
+    padding: 0 5px;
+  }
 `;
 
 const Icons = styled.p`
@@ -79,11 +87,17 @@ const ImageStyle = styled.div`
   height: 60px;
   margin-right: 1.5rem;
   top: 15px;
+  @media( max-width: 576px){
+    padding-bottom: 5px 0;
+  }
 `;
 
 const Describe = styled.p`
   width: 11em;
-  font-size: 0.6rem;
+  font-size: 0.6rem;@media( max-width: 576px){
+    width: 100%;
+    padding: 0 5px;
+  }
 `;
 
 const Deta = styled.p`
@@ -100,6 +114,13 @@ const Flex3 = styled.div`
   }
   .img{
     border-radius: 5px;
+    @media( max-width: 576px){
+      padding: 5px 0;
+    }
+  }
+  @media( max-width: 576px){
+
+    padding: 5px 0;
   }
 `;
 
